@@ -94,8 +94,9 @@ const SettingsPage = () => {
           value={newDomain.esp}
           onChange={handleChange}
         >
+          <option value="" disabled hidden>Choose ESP</option>
           {Object.entries(espOptions).map(([label, value]) => (
-            <option key={value} value={value}>
+            <option key={value} value={label}>
               {label}
             </option>
           ))}
