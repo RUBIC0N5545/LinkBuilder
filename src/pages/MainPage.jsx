@@ -37,9 +37,9 @@ const MainPage = () => {
     return (
         <div className="container">
             <div class="main">
-                <select id="link-type" placeholder="Select link type" value={linkType}>
-                    {linkTypes.map(linkType => (
-                        <option key={linkType} value={linkType} onChange={() => setLinkType(linkType)}>{linkType}</option>
+                <select id="link-type" placeholder="Select link type" value={linkType} onChange={(e) => setLinkType(e.target.value)}>
+                    {linkTypes.map(optLinkType => (
+                        <option key={optLinkType} value={optLinkType} onChange={() => setLinkType(optLinkType)}>{optLinkType}</option>
                     ))}
                 </select>
                 <select id="domain" placeholder="Enter domain" value={currentDomain} onChange={(e) => setCurrentDomain(e.target.value)}>
